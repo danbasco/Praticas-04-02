@@ -18,7 +18,13 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Tests
+      - name: Instalar Dependências
         run: | 
           pip install flask
-          python -m unittest -v tests/appTest.py
+          pip install coverage
+
+
+      - name: Tests
+        run: | 
+          python -m coverage run -m unittest -v tests/appTest.py
+          python -m coverage report
