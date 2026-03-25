@@ -19,5 +19,6 @@ jobs:
           python-version: '3.x'
 
       - name: Tests
-        run: pip install flask
-        run: python -m unittest -v tests/appTest.py
+        run: | 
+          pip install flask
+          python -m unittest -v tests/appTest.py
