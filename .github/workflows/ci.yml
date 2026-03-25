@@ -19,7 +19,5 @@ jobs:
           python-version: '3.x'
 
       - name: Tests
-        run: echo "This job tests something"
-
-      - name: Test 2
-        run: echo "Rodando o segundo teste"
+        run: pip install flask
+        run: python -m unittest -v tests/appTest.py
