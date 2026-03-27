@@ -6,7 +6,19 @@ on:
   pull_request:
 
 jobs:
-  test-job:
+          
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executar Build
+        run: echo "Olá, ${{ github.actor }}!"
+
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,10 +40,3 @@ jobs:
         run: | 
           python -m coverage run -m unittest -v tests/appTest.py
           python -m coverage report
-          
-  test-job2:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Teste
-        run: echo "Novo Teste"
