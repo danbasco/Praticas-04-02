@@ -30,6 +30,8 @@ jobs:
           python -m coverage report
           
   test-job2:
+    runs-on: ubuntu-latest
+
     steps:
      -name: Teste
      run: echo "Novo Teste"
