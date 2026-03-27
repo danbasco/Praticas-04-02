@@ -28,3 +28,8 @@ jobs:
         run: | 
           python -m coverage run -m unittest -v tests/appTest.py
           python -m coverage report
+          
+  test-job2:
+    steps:
+     -name: Teste
+     run: echo "Novo Teste"
