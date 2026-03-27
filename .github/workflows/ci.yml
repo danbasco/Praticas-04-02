@@ -33,5 +33,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     -name: Teste
-     run: echo "Novo Teste"
+      - name: Teste
+        run: echo "Novo Teste"
