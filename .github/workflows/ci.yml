@@ -43,8 +43,10 @@ jobs:
           python -m coverage run -m unittest -v tests/appTest.py
           python -m coverage report
 
-      - name: Semgrep scan
-        uses: returntocorp/semgrep-action@v1
+      - name: Rodar Semgrep
+        run: |
+          pip install semgrep
+          semgrep --config=auto --json --output=semgrep-report.json
 
   deploy:
     runs-on: ubuntu-latest
